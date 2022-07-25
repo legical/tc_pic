@@ -1,16 +1,17 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1346053_111ghkv8md9.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-<script src="https://blog-static.cnblogs.com/files/zouwangblog/main.js"></script>
+<script
+    src="https://raw.fastgit.org/legical/tc_pic/main/CNblogs-Theme-Sakura-master/CNblogs-Theme-Sakura/main.js"></script>
 <script type="text/javascript">
     $.silence({
         profile: {
             enable: true,
-            avatar: 'https://img2018.cnblogs.com/blog/1646268/201907/1646268-20190701151456277-1502609418.jpg',
-            favicon: 'https://files-cdn.cnblogs.com/files/zouwangblog/blog_logo.gif',
-            notice: '个人博客地址：https://zouwang.vip/ 欢迎大家来踩'
+            avatar: 'https://raw.fastgit.org/legical/tc_pic/main/pic/avatar/hhh.jpg',
+            authorName: '云吱',
+            // notice: '个人博客地址：https://zouwang.vip/ 欢迎大家来踩'
         },
         catalog: {
-            enable: true,
+            enable: false,
             move: true,
             index: true,
             level1: 'h2',
@@ -18,42 +19,43 @@
             level3: 'h4',
         },
         signature: {
-            enable: true,
-            home: 'https://www.cnblogs.com/zouwangblog/',
+            author: null,
+            enable: false,
+            home: 'https://www.cnblogs.com/leebri/',
             license: 'CC BY 4.0',
             link: 'https://creativecommons.org/licenses/by/4.0'
         },
         sponsor: {
-            enable: true,
+            enable: false,
             paypal: null,
-            wechat: 'https://www.cnblogs.com/images/cnblogs_com/zouwangblog/1477590/t_%e5%be%ae%e4%bf%a1%e5%9b%be%e7%89%87_20190704175553.png',
-            alipay: 'https://www.cnblogs.com/images/cnblogs_com/zouwangblog/1477590/t_%e5%be%ae%e4%bf%a1%e5%9b%be%e7%89%87_20190704174158.png'
+            wechat: null,
+            alipay: null
         },
         github: {
             enable: false,
             color: '#fff',
-            fill: '#FF85B8',
-            link: 'https://github.com/Zou-Wang'
+            fill: null,
+            link: 'https://github.com/legical',
         },
-	topImg: {
-		homeTopImg: [
-"https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190806172418911-2037584311.jpg",
-					],
-              notHomeTopImg: [
-"https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190807151151330-1121103170.png",
-					]
-		},
-                      topInfo: {
-					title: 'Hi, Toretto!',
-                                        text: 'You got to put the past behind you before you can move on.',
-					github: "https://github.com/Zou-Wang",
-					weibo: "https://weibo.com/5682002748/profile?topnav=1&wvr=6&is_all=1",
-					telegram: "",
-					music: "https://music.163.com/#/user/home?id=436757779",
-					twitter: "",
-					zhihu:"https://www.zhihu.com/people/zouwang/activities",
-					mail: "http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=KlBFX11LRE0SGBlqW1sESUVH",
-				}
+        topImg: {
+            homeTopImg: [
+                "https://api.mtyqx.cn/tapi/random.php",
+            ],
+            notHomeTopImg: [
+                "https://api.mtyqx.cn/api/random.php"
+            ]
+        },
+        topInfo: {
+            title: '色相事一刹那',
+            text: '戒骄戒躁，久久为功',
+            github: "https://github.com/legical",
+            // weibo: "",
+            // telegram: "",
+            // music: "",
+            // twitter: "",
+            // zhihu: "",
+            mail: "http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=M1BbRktGUl1UVnNVXEteUlpfHVBcXg",
+        }
     });
 </script>
 
@@ -61,27 +63,27 @@
 <div id="showsectime"></div>
 
 <script type="text/javascript">
-function NewDate(str) { 
-str = str.split('-'); 
-var date = new Date(); 
-date.setUTCFullYear(str[0], str[1] - 1, str[2]); 
-date.setUTCHours(0, 0, 0, 0); 
-return date; 
-} 
-function showsectime() {
-var birthDay =NewDate("2017-08-23");
-var today=new Date();
-var timeold=today.getTime()-birthDay.getTime();
-var sectimeold=timeold/1000
-var secondsold=Math.floor(sectimeold);
-var msPerDay=24*60*60*1000; var e_daysold=timeold/msPerDay;
-var daysold=Math.floor(e_daysold);
-var e_hrsold=(daysold-e_daysold)*-24;
-var hrsold=Math.floor(e_hrsold);
-var e_minsold=(hrsold-e_hrsold)*-60;
-var minsold=Math.floor((hrsold-e_hrsold)*-60); var seconds=Math.floor((minsold-e_minsold)*-60).toString();
-document.getElementById("showsectime").innerHTML = "第"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
-setTimeout(showsectime, 1000);
-}showsectime();
+    function NewDate(str) {
+        str = str.split('-');
+        var date = new Date();
+        date.setUTCFullYear(str[0], str[1] - 1, str[2]);
+        date.setUTCHours(0, 0, 0, 0);
+        return date;
+    }
+    function showsectime() {
+        var birthDay = NewDate("2000-03-21");
+        var today = new Date();
+        var timeold = today.getTime() - birthDay.getTime();
+        var sectimeold = timeold / 1000
+        var secondsold = Math.floor(sectimeold);
+        var msPerDay = 24 * 60 * 60 * 1000; var e_daysold = timeold / msPerDay;
+        var daysold = Math.floor(e_daysold);
+        var e_hrsold = (daysold - e_daysold) * -24;
+        var hrsold = Math.floor(e_hrsold);
+        var e_minsold = (hrsold - e_hrsold) * -60;
+        var minsold = Math.floor((hrsold - e_hrsold) * -60); var seconds = Math.floor((minsold - e_minsold) * -60).toString();
+        document.getElementById("showsectime").innerHTML = "第" + daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+        setTimeout(showsectime, 1000);
+    } showsectime();
 </script>
 <!--纪念日end-->

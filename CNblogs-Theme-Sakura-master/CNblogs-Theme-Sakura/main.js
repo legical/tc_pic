@@ -58,7 +58,7 @@
 					// music: "",
 					// twitter: "",
 					// zhihu: "",
-					mail: "chuxuange@gmail.com",
+					mail: "http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=M1BbRktGUl1UVnNVXEteUlpfHVBcXg",
 				}
 			};
 

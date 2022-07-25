@@ -11,7 +11,7 @@
 			this.defaluts = {
 				profile: {
 					enable: true,
-					avatar: 'https://raw.fastgit.org/legical/tc_pic/main/pic/avatar/hhh.jpg',
+					avatar: 'https://pic.cnblogs.com/avatar/2937389/20220723235216.png',
 					authorName: '云吱',
 					// notice: '个人博客地址：https://zouwang.vip/ 欢迎大家来踩'
 				},
@@ -44,7 +44,7 @@
 				},
 				topImg: {
 					homeTopImg: [
-						"https://api.mtyqx.cn/tapi/random.php",
+						"https://raw.fastgit.org/legical/tc_pic/main/pic/wallpaper/wallhaven-833ky2_2560x1440.png",
 					],
 					notHomeTopImg: [
 						"https://raw.fastgit.org/legical/tc_pic/main/pic/wallpaper/wallhaven-96688w_1920x1080.png"
@@ -969,7 +969,7 @@
 			let post_view_count = $('#post_view_count').text() //阅读数
 			if (window.location.href.indexOf('articles') === -1) {
 				var header =
-					`<p class="entry-census"><span><a href="https://www.cnblogs.com/leebri/"><img src="//pic.cnblogs.com/face/1646268/20190628143903.png"></a></span><span><a href="https://www.cnblogs.com/leebri/">Toretto</a></span><span class="bull">·</span>${post_date}<span class="bull">·</span>${post_view_count} 次阅读</p>`;
+					`<p class="entry-census"><span><a href="https://www.cnblogs.com/leebri/"><img src="//pic.cnblogs.com/avatar/2937389/20220723235216.png"></a></span><span><a href="https://www.cnblogs.com/leebri/">Leebri</a></span><span class="bull">·</span>${post_date}<span class="bull">·</span>${post_view_count} 次阅读</p>`;
 				$('.pattern-header').append(header)
 				$('.pattern-center').addClass('single-center')
 				$('.pattern-header').addClass('single-header')

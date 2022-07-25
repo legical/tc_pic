@@ -26,7 +26,7 @@
 				signature: {
 					author: null,
 					enable: false,
-					home: 'https://www.cnblogs.com',
+					home: 'https://www.cnblogs.com/leebri/',
 					license: 'CC BY 4.0',
 					link: 'https://creativecommons.org/licenses/by/4.0'
 				},
@@ -40,7 +40,7 @@
 					enable: false,
 					color: '#fff',
 					fill: null,
-					link: null,
+					link: 'https://github.com/legical',
 				},
 				topImg: {
 					homeTopImg: [

@@ -13,6 +13,7 @@
 					enable: true,
 					avatar: 'https://raw.fastgit.org/legical/tc_pic/main/pic/avatar/hhh.jpg',
 					authorName: '云吱',
+					// notice: '个人博客地址：https://zouwang.vip/ 欢迎大家来踩'
 				},
 				catalog: {
 					enable: false,
@@ -180,7 +181,7 @@
 				$(_that.cnblogs.header).css('opacity', '1');
 				$('#header #navList').css('margin-left', '0px');
 				//修改文章布局
-				$('#main').css({'margin': '0 auto', 'padding': '0 10px', 'min-width': '950px'});
+				$('#main').css({ 'margin': '0 auto', 'padding': '0 10px', 'min-width': '950px' });
 			}
 		}
 
@@ -192,7 +193,7 @@
 			let _that = this;
 			var oldScrollY = 0;
 			if ($win.width() > 767) {
-				$('#main').css({'min-width': '800px'});
+				$('#main').css({ 'min-width': '800px' });
 				//鼠标悬浮判断，如果页面不是位于顶部则head不消失
 				$(_that.cnblogs.header).hover(function () {
 					$(_that.cnblogs.header).css('opacity', '1');
@@ -285,10 +286,10 @@
 
 			//添加li内嵌ui
 			let guanyu = '<ul class="sub-menu">' +
-					'<li><a href="https://api.03c3.cn/zb "><i class="fa fa-area-chart" aria-hidden="true"></i> 新闻</a></li>' +
-					'<li><a href="https://cybermap.kaspersky.com/cn "><i class="fa fa-heartbeat" aria-hidden="true"></i> 监控</a></li>' +
-					// '<li><a href="https://github.com/Zou-Wang/CNblogs-Theme-Sakura "><i class="iconfont icon-taohua" aria-hidden="true"></i> 主题</a></li>' +
-					'</ul>';
+				'<li><a href="https://api.03c3.cn/zb "><i class="fa fa-area-chart" aria-hidden="true"></i> 新闻</a></li>' +
+				'<li><a href="https://cybermap.kaspersky.com/cn "><i class="fa fa-heartbeat" aria-hidden="true"></i> 监控</a></li>' +
+				// '<li><a href="https://github.com/Zou-Wang/CNblogs-Theme-Sakura "><i class="iconfont icon-taohua" aria-hidden="true"></i> 主题</a></li>' +
+				'</ul>';
 			$('#blog_nav_myguanyu').after(guanyu);
 
 		}
@@ -299,7 +300,7 @@
 		// buildCopyright() {
 		// 	//这里能保留么，算是我的一个小心愿。
 		// 	var content = `<div> Powered By <a href="https://www.cnblogs.com" target="_blank">Cnblogs</a> |
-        //     Theme <a href="https://github.com/Zou-Wang/CNblogs-Theme-Sakura" target="_blank">Toretto v${this.version}</a></div>`;
+		//     Theme <a href="https://github.com/Zou-Wang/CNblogs-Theme-Sakura" target="_blank">Toretto v${this.version}</a></div>`;
 		// 	$(this.cnblogs.footer).append(content);
 		// }
 
@@ -313,7 +314,7 @@
 				const authorName = config.author || $(this.cnblogs.publicProfile).find('a:eq(0)').html();
 
 				const content =
-						`<div class="esa-post-signature"> 
+					`<div class="esa-post-signature"> 
                     <p>作者：<a href="${config.home}">${authorName}</a></p> 
                     <p>出处：<a href="${postUrl}">${postUrl}</a></p> 
                     <p>本站使用「<a href="${config.link}"  target="_blank">${config.license}</a>」创作共享协议，转载请在文章明显位置注明作者及出处。</p> 
@@ -465,7 +466,7 @@
 				}
 
 				let $catalog = $(
-						`<div class="esa-catalog">
+					`<div class="esa-catalog">
                         <div class="esa-catalog-contents">
                             <div class="esa-catalog-title">目录</div>
                             <a class="esa-catalog-close">✕</a>
@@ -517,17 +518,17 @@
 					var idx = eleIds[index];
 
 					catalogContents +=
-							`<li class="li_${tagName}" title="${title}">
+						`<li class="li_${tagName}" title="${title}">
                             <i class="${idx}" ></i><a class="esa-anchor-link">${(titleIndex + titleContent)}</a>
                         </li>`;
 
 					$(header).attr('id', `${idx}`)
-							.html(`<span>${titleContent}</span><a href="#${idx}" class="esa-anchor">#</a>`)
-							.hover(() => {
-								$(header).find('.esa-anchor').css('opacity', 1);
-							}, () => {
-								$(header).find('.esa-anchor').css('opacity', 0);
-							});
+						.html(`<span>${titleContent}</span><a href="#${idx}" class="esa-anchor">#</a>`)
+						.hover(() => {
+							$(header).find('.esa-anchor').css('opacity', 1);
+						}, () => {
+							$(header).find('.esa-anchor').css('opacity', 0);
+						});
 				});
 				catalogContents += `</ul>`;
 
@@ -604,7 +605,7 @@
 			if (config.enable) {
 				let fillStyle = config.fill ? `fill:${config.fill};` : '';
 				$('body').append(
-						`<a href="${config.link}" class="github-corner" title="Fork me on GitHub">
+					`<a href="${config.link}" class="github-corner" title="Fork me on GitHub">
                         <svg width="60" height="60" viewBox="0 0 250 250" style="${fillStyle} color:${config.color}; z-index: 999999; position: fixed; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true">
                             <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
                             <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
@@ -740,11 +741,11 @@
 
 			//博客logo
 			var title = '<div class="site-branding">' +
-					'<span class="logolink moe-mashiro">' +
-					'<a href="https://www.cnblogs.com/leebri/" alt="Leebri">' +
-					'<ruby><span class="sakuraso">色相あっとい</span><span class="no">う</span><span class="shironeko">間</span>' +
-					'<rt class="chinese-font">光阴里无尽藏</rt></ruby></a></span>' +
-					'</div>'
+				'<span class="logolink moe-mashiro">' +
+				'<a href="https://www.cnblogs.com/leebri/" alt="Leebri">' +
+				'<ruby><span class="sakuraso">色相あっとい</span><span class="no">う</span><span class="shironeko">間</span>' +
+				'<rt class="chinese-font">光阴里无尽藏</rt></ruby></a></span>' +
+				'</div>'
 			$('body').prepend(title);
 
 
@@ -816,34 +817,34 @@
 		mainHeader() {
 			const config = this.defaluts.topInfo;
 			var header =
-					`<div class="headertop filter-dot">` +
-					`</div>` +
-					`<div class="main-header">` +
-					`</div>` +
-					`<div class="focusinfo no-select">` +
-					`       <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="光阴里无尽藏">${config.title}</h1>` +
-					`       <div class="header-info"><p><i class="fa fa-quote-left"></i> ${config.text} <i class="fa fa-quote-right"></i></p>` +
-					`           <div class="top-social_v2">` +
-					`              <li id="bg-pre"><img class="flipx" src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808103709869-648245711.png"></li>` +
-					`              <li><a href="${config.github}" target="_blank" class="social-github" title="github"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095618459-218538626.png"></a></li>` +
-					// `              <li><a href="${config.weibo}" target="_blank" class="social-sina" title="sina"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095623418-1617766229.png"></a></li>` +
-					// `              <li><a href="${config.telegram}" target="_blank" class="social-lofter" title="telegram"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095628401-835828752.png"></a></li>` +
-					// `              <li><a href="${config.music}" target="_blank" class="social-wangyiyun" title="CloudMusic"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095640330-1209750721.png"></a></li>` +
-					// `              <li><a href="${config.twitter}" target="_blank" class="social-wangyiyun" title="Twitter"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095635213-701885869.png"></a></li>` +
-					// `              <li><a href="${config.zhihu}" target="_blank" class="social-wangyiyun" title="Zhihu"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095650119-1882504549.png"></a></li>` +
-					`              <li><a href="${config.mail}" target="_blank" class="social-wangyiyun" title="E-mail"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095613956-1350546638.png"></a></li>` +
-					`              <li id="bg-next"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808103709869-648245711.png"></li>` +
-					`           </div>` +
-					`      </div>` +
-					`</div>` +
-					`<div class="wave">` +
-					`   <div id="banner_wave_1"></div>` +
-					`   <div id="banner_wave_2"></div>` +
-					`</div>` +
-					`<div class="scroll-down" data-offset="-45">` +
-					`        <span class="hidden">Scroll Down</span>` +
-					`        <i class="fa fa-chevron-down" aria-hidden="true"></i>` +
-					`</div>`;
+				`<div class="headertop filter-dot">` +
+				`</div>` +
+				`<div class="main-header">` +
+				`</div>` +
+				`<div class="focusinfo no-select">` +
+				`       <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="光阴里无尽藏">${config.title}</h1>` +
+				`       <div class="header-info"><p><i class="fa fa-quote-left"></i> ${config.text} <i class="fa fa-quote-right"></i></p>` +
+				`           <div class="top-social_v2">` +
+				`              <li id="bg-pre"><img class="flipx" src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808103709869-648245711.png"></li>` +
+				`              <li><a href="${config.github}" target="_blank" class="social-github" title="github"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095618459-218538626.png"></a></li>` +
+				// `              <li><a href="${config.weibo}" target="_blank" class="social-sina" title="sina"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095623418-1617766229.png"></a></li>` +
+				// `              <li><a href="${config.telegram}" target="_blank" class="social-lofter" title="telegram"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095628401-835828752.png"></a></li>` +
+				// `              <li><a href="${config.music}" target="_blank" class="social-wangyiyun" title="CloudMusic"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095640330-1209750721.png"></a></li>` +
+				// `              <li><a href="${config.twitter}" target="_blank" class="social-wangyiyun" title="Twitter"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095635213-701885869.png"></a></li>` +
+				// `              <li><a href="${config.zhihu}" target="_blank" class="social-wangyiyun" title="Zhihu"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095650119-1882504549.png"></a></li>` +
+				`              <li><a href="${config.mail}" target="_blank" class="social-wangyiyun" title="E-mail"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808095613956-1350546638.png"></a></li>` +
+				`              <li id="bg-next"><img src="https://img2018.cnblogs.com/blog/1646268/201908/1646268-20190808103709869-648245711.png"></li>` +
+				`           </div>` +
+				`      </div>` +
+				`</div>` +
+				`<div class="wave">` +
+				`   <div id="banner_wave_1"></div>` +
+				`   <div id="banner_wave_2"></div>` +
+				`</div>` +
+				`<div class="scroll-down" data-offset="-45">` +
+				`        <span class="hidden">Scroll Down</span>` +
+				`        <i class="fa fa-chevron-down" aria-hidden="true"></i>` +
+				`</div>`;
 			$('#home').prepend(header);
 		}
 
@@ -856,8 +857,8 @@
 			let homeTopImg = config.homeTopImg, bgImg;
 			let index = this.randomNum(0, homeTopImg.length - 1);
 			homeTopImg.length > 0 ?
-					(homeTopImg.length > 1 ? bgImg = homeTopImg[index] : bgImg = homeTopImg[0])
-					: bgImg = "";
+				(homeTopImg.length > 1 ? bgImg = homeTopImg[index] : bgImg = homeTopImg[0])
+				: bgImg = "";
 			$('.main-header').css({
 				'background-image': 'url(' + bgImg + ')',
 			});
@@ -866,7 +867,7 @@
 			$('.scroll-down').click(function () {
 				let endScroll;
 				endScroll = $('#main').offset().top - 20;
-				$('html,body').stop().animate({scrollTop: endScroll}, 1000);
+				$('html,body').stop().animate({ scrollTop: endScroll }, 1000);
 			});
 
 			//切换首页壁纸
@@ -897,53 +898,50 @@
 		 * 构建首页随笔列表
 		 */
 		setHomeSuiBiList() {
-		let article_list = $('.day');
-    	let author = $(this.cnblogs.publicProfile).find('a:eq(0)').html() //作者
-		for(let i = article_list.length-1;i>=0;i--)
-		{
-			let time = $('.day').find('div.dayTitle')[i].textContent.replace('年', '-').replace('月', '-').replace('日', ''); //获取年月日
-			let PostTitles = $(article_list[i]).find('.postTitle');
-			let readMores = $(article_list[i]).find('a.c_b_p_desc_readmore');
-			let descs = $(article_list[i]).find('.postDesc');
-			let infos = $(article_list[i]).find('.postCon');
-			let contents = $(article_list[i]).find('.c_b_p_desc');
-			for(let j=PostTitles.length-1;j>=0;j--)
-			{
-				let readMore = $(readMores[j]).context.href;
-				let postTitle = $(PostTitles[j]).context.innerHTML;
-				let desc = $(descs[j]).text();
-				let readNum = desc.substring(desc.indexOf("(") + 1, desc.indexOf(")"));
-				let comNum = desc.substring(desc.lastIndexOf("(") + 1, desc.lastIndexOf(")"));
-				let edit =  $(descs[j]).find('a')[0].href;
-				let url = $(infos[j]).find('img')[0];
-				let content = contents[j].textContent.replace('阅读全文','');
-				if(url!=undefined)
-				{
-					url = url.src;
-				}else{
-					// url = 'https://raw.fastgit.org/legical/tc_pic/main/pic/wallpaper/wallhaven-96688w_1920x1080.png';
-					url = 'https://api.mtyqx.cn/tapi/random.php';   
+			let article_list = $('.day');
+			let author = $(this.cnblogs.publicProfile).find('a:eq(0)').html() //作者
+			for (let i = article_list.length - 1; i >= 0; i--) {
+				let time = $('.day').find('div.dayTitle')[i].textContent.replace('年', '-').replace('月', '-').replace('日', ''); //获取年月日
+				let PostTitles = $(article_list[i]).find('.postTitle');
+				let readMores = $(article_list[i]).find('a.c_b_p_desc_readmore');
+				let descs = $(article_list[i]).find('.postDesc');
+				let infos = $(article_list[i]).find('.postCon');
+				let contents = $(article_list[i]).find('.c_b_p_desc');
+				for (let j = PostTitles.length - 1; j >= 0; j--) {
+					let readMore = $(readMores[j]).context.href;
+					let postTitle = $(PostTitles[j]).context.innerHTML;
+					let desc = $(descs[j]).text();
+					let readNum = desc.substring(desc.indexOf("(") + 1, desc.indexOf(")"));
+					let comNum = desc.substring(desc.lastIndexOf("(") + 1, desc.lastIndexOf(")"));
+					let edit = $(descs[j]).find('a')[0].href;
+					let url = $(infos[j]).find('img')[0];
+					let content = contents[j].textContent.replace('阅读全文', '');
+					if (url != undefined) {
+						url = url.src;
+					} else {
+						// url = 'https://raw.fastgit.org/legical/tc_pic/main/pic/wallpaper/wallhaven-96688w_1920x1080.png';
+						url = 'https://api.mtyqx.cn/tapi/random.php';
+					}
+					let html = `<div class="post post-list-thumb post-list-show">` +
+						`  <div class="post-thumb"> <a href="${readMore}"> <img class="lazyload" src="${url}"  data-src="${url}"> </a></div>` +
+						`  <div class="post-content-wrap">` +
+						`   <div class="post-content">` +
+						`     <div class="post-date"> <i class="iconfont icon-time"></i>发布于 ${time}</div>` +
+						`     <div class="post-title">${postTitle}</div>` +
+						`     <div class="post-meta"> <span><i class="iconfont icon-attention"></i>${readNum} 热度</span> <span class="comments-number"><i class="iconfont icon-mark"></i>${comNum} 条评论</span> <span><i class="iconfont icon-cc-user"></i><a href="https://www.cnblogs.com/leebri/p/about.html"></a>${author}</span></div>` +
+						`     <div class="float-content"><p>${content}</p>` +
+						`        <div class="post-bottom">` +
+						`           <a href="${readMore}" class="button-normal"><i class="iconfont icon-gengduo"></i></a>` +
+						`           <a href="${edit}" class="button-normal"><i class="iconfont icon-bianji"></i></a>` +
+						`        </div>` +
+						`     </div>` +
+						`  </div>` +
+						` </div>` +
+						`</div>`;
+					$('.forFlow').prepend(html);
 				}
-				let html = `<div class="post post-list-thumb post-list-show">` +
-				`  <div class="post-thumb"> <a href="${readMore}"> <img class="lazyload" src="${url}"  data-src="${url}"> </a></div>` +
-				`  <div class="post-content-wrap">` +
-				`   <div class="post-content">` +
-				`     <div class="post-date"> <i class="iconfont icon-time"></i>发布于 ${time}</div>` +
-				`     <div class="post-title">${postTitle}</div>` +
-				`     <div class="post-meta"> <span><i class="iconfont icon-attention"></i>${readNum} 热度</span> <span class="comments-number"><i class="iconfont icon-mark"></i>${comNum} 条评论</span> <span><i class="iconfont icon-cc-user"></i><a href="https://www.cnblogs.com/leebri/p/about.html"></a>${author}</span></div>` +
-				`     <div class="float-content"><p>${content}</p>` +
-				`        <div class="post-bottom">` +
-				`           <a href="${readMore}" class="button-normal"><i class="iconfont icon-gengduo"></i></a>` +
-				`           <a href="${edit}" class="button-normal"><i class="iconfont icon-bianji"></i></a>` +
-				`        </div>` +
-				`     </div>` +
-				`  </div>` +
-				` </div>` +
-				`</div>`;
-				$('.forFlow').prepend(html);
 			}
-		}
-	
+
 			$('.post-list-thumb:odd').addClass('post-list-thumb-left')
 
 			//构建notice
@@ -958,11 +956,11 @@
 		 */
 		postHeader() {
 			var center =
-					'<div class="pattern-center">' +
-					' <div class="pattern-attachment-img"><img src="" data-src=""' +
-					'    style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></div>' +
-					' <header class="pattern-header "><h1 class="entry-title"></h1></header>' +
-					'</div>';
+				'<div class="pattern-center">' +
+				' <div class="pattern-attachment-img"><img src="" data-src=""' +
+				'    style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;"></div>' +
+				' <header class="pattern-header "><h1 class="entry-title"></h1></header>' +
+				'</div>';
 			$('#home').prepend(center);
 			const sbTitle = $('#cb_post_title_url').text();
 			$('.entry-title').text(sbTitle);// 设置标题
@@ -971,7 +969,7 @@
 			let post_view_count = $('#post_view_count').text() //阅读数
 			if (window.location.href.indexOf('articles') === -1) {
 				var header =
-						`<p class="entry-census"><span><a href="https://www.cnblogs.com/leebri/"><img src="//pic.cnblogs.com/face/1646268/20190628143903.png"></a></span><span><a href="https://www.cnblogs.com/leebri/">Toretto</a></span><span class="bull">·</span>${post_date}<span class="bull">·</span>${post_view_count} 次阅读</p>`;
+					`<p class="entry-census"><span><a href="https://www.cnblogs.com/leebri/"><img src="//pic.cnblogs.com/face/1646268/20190628143903.png"></a></span><span><a href="https://www.cnblogs.com/leebri/">Toretto</a></span><span class="bull">·</span>${post_date}<span class="bull">·</span>${post_view_count} 次阅读</p>`;
 				$('.pattern-header').append(header)
 				$('.pattern-center').addClass('single-center')
 				$('.pattern-header').addClass('single-header')
@@ -990,8 +988,8 @@
 			let notHomeTopImg = config.notHomeTopImg, bgImg;
 
 			notHomeTopImg.length > 0 ?
-					(notHomeTopImg.length > 1 ? bgImg = notHomeTopImg[this.randomNum(0, notHomeTopImg.length - 1)] : bgImg = notHomeTopImg[0])
-					: bgImg = "";
+				(notHomeTopImg.length > 1 ? bgImg = notHomeTopImg[this.randomNum(0, notHomeTopImg.length - 1)] : bgImg = notHomeTopImg[0])
+				: bgImg = "";
 			$('.pattern-attachment-img img').attr('src', bgImg);
 		};
 

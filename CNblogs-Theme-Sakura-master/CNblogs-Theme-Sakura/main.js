@@ -101,7 +101,7 @@
 			}
 			this.buildCustomElements();
 			this.buildGithubCorner();
-			this.buildCopyright();
+			// this.buildCopyright();
 			this.buildBloggerProfile();
 			this.getMainMode();
 			this.buildToolbar();
